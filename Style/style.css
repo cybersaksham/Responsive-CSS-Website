@@ -60,15 +60,16 @@ p {
 #navbar {
   display: flex;
   align-items: center;
-  background: rgba(0, 0, 0, 0.2) url("../Gallery/bg.jpg") no-repeat;
+  background-color: #040c13;
   background-size: cover;
   background-blend-mode: darken;
-  max-height: 7vh;
+  max-height: 45px;
   overflow-y: hidden;
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 0 10px;
+  overflow-x: hidden;
 }
 
 #navContent {
@@ -125,30 +126,8 @@ p {
   margin: 0 10px;
 }
 
-/* .burger {
-  display: block;
-  width: 100%;
-  margin: 5px 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.burgerLine {
-  width: 30px;
-  margin: 3px 0;
-  background-color: white;
-  border: 2px solid white;
-  transform-origin: left;
-} */
-/* Icon 1 */
-
 #burger {
+  display: none;
   width: 100%;
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -214,7 +193,7 @@ p {
 }
 
 #homeSection {
-  height: 93vh;
+  min-height: 94vh;
   display: flex;
   background: rgba(0, 0, 0, 0.2) url("../Gallery/bg.jpg") no-repeat;
   background-size: cover;
@@ -267,6 +246,11 @@ p {
   margin-right: 20px;
 }
 
+.card-reverse .aboutContent {
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
 #contact {
   background-color: #fff6f6;
   padding: 25px 0;
@@ -299,7 +283,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2) url(../Gallery/bg.jpg) no-repeat;
+  text-align: center;
+  background-color: #040c13;
   background-size: cover;
   background-blend-mode: darken;
   height: 5vh;
@@ -319,12 +304,56 @@ footer {
 
   #navContent {
     flex-direction: column;
-    margin: 30px 0;
+    margin: 60px 0;
   }
 
   #leftNav,
   #nav-list {
     flex-direction: column;
     text-align: center;
+  }
+
+  #about {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #homeSection {
+    flex-direction: column-reverse;
+  }
+
+  .aboutCard {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .imgShort {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
+
+  .aboutContent {
+    margin: 0;
+    width: 100%;
+  }
+
+  .card-reverse .aboutContent {
+    margin: 0;
+  }
+
+  #homeSection .imgShort {
+    justify-content: center;
+  }
+
+  #homeContent {
+    width: 80%;
+    text-align: center;
+  }
+
+  footer {
+    padding: 10px;
   }
 }
