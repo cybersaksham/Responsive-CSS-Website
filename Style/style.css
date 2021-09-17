@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: white;
   transition: all 0.2s ease-in-out;
 }
 
@@ -15,6 +14,17 @@ input,
 button {
   outline: none;
   color: black;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: "Baloo Bhai 2", cursive;
+  border-bottom: 2px solid;
+  display: inline-block;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn {
@@ -82,6 +92,7 @@ button {
 
 .nav-item a {
   text-decoration: none;
+  color: white;
   font-family: "Baloo Bhai 2", cursive;
 }
 
@@ -108,23 +119,43 @@ button {
 #homeContent {
   width: 40%;
   margin: 0 80px;
+  color: white;
 }
 
-#homeContent h2 {
-  margin-bottom: 20px;
-  font-family: "Baloo Bhai 2", cursive;
-}
-
-#homeContent p {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#homeImg {
+.imgShort {
   width: 30%;
 }
 
-#homeImg img {
+.imgShort img {
+  float: right;
+  clear: both;
   width: 183px;
   border: 3px solid white;
   border-radius: 20px;
+}
+
+#about {
+  padding: 40px 0;
+  width: 80%;
+  margin: auto;
+}
+
+.aboutCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.card-reverse {
+  flex-direction: row-reverse;
+}
+
+.card-reverse .imgShort img {
+  float: left;
+}
+
+.aboutContent {
+  width: 70%;
+  margin-right: 20px;
 }
