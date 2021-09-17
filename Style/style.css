@@ -11,9 +11,11 @@ html {
 }
 
 input,
-button {
+button,
+textarea {
   outline: none;
   color: black;
+  resize: none;
 }
 
 h2 {
@@ -43,6 +45,16 @@ p {
 
 .btn-sm {
   padding: 0 6px;
+}
+
+.btn-dark {
+  border: 2px solid black;
+  color: black;
+}
+
+.btn-dark:hover {
+  background-color: black;
+  color: white;
 }
 
 #navbar {
@@ -158,6 +170,33 @@ p {
 .aboutContent {
   width: 70%;
   margin-right: 20px;
+}
+
+#contact {
+  background-color: #fff6f6;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: none;
 }
 
 footer {
