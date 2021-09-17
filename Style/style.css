@@ -4,6 +4,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 input,
 button {
   outline: none;
@@ -35,6 +39,9 @@ button {
   background-blend-mode: darken;
   min-height: 8vh;
   overflow-y: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 #leftNav {
